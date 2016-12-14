@@ -1,4 +1,4 @@
-function P = ProjPersMatrix1(f,u0,v0)
+function P = PersProjMatrix1(f,u0,v0)
 % function P = ProjPersMatrix1(f,u0,v0)
 %
 % Computes the Perspective Projection Matrix
@@ -13,8 +13,8 @@ if (nargin == 1)
  end
 
 
-P = [f 0 u0 0
-     0 f v0 0 
-     0 0 1 0];
+P = [-f  0  u0  0
+      0 -f  v0  0 
+      0  0  1   0];
 
 return;

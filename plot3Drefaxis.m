@@ -13,7 +13,7 @@ for i=1:3
   if i==3
     s='r';
   end
-  quiver3(K(1,4),K(2,4),K(3,4),K(1,i),K(2,i),K(3,i),s);
+  h = quiver3(K(1,4),K(2,4),K(3,4),K(1,i),K(2,i),K(3,i),s);
   % Force hold for j and k vectors
   hold on
 end

@@ -1,4 +1,4 @@
-function P = PersProjMatrix1(alpha_u, alpha_v, u0,v0)
+function P = PersProjMatrix(alpha_u, alpha_v, u0,v0)
 % function P = ProjPersMatrix1(f,u0,v0)
 %
 % Computes the Perspective Projection Matrix based on the camera intrinsic

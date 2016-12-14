@@ -1,4 +1,4 @@
-function plot3Dpoints(M,s)
+function plot3Dpoints(M,s,links)
 % function plot3Dpoints(M,s)
 % 
 % Plots the 3D poinsts defined by array M. Each column of M defines a point 
@@ -15,3 +15,29 @@ if nargin < 2
 end
  
 plot3(M(1,:)./M(4,:),M(2,:)./M(4,:),M(3,:)./M(4,:),s)
+
+if nargin >= 3
+    % Store current hold state
+    holdstate = ishold;
+
+    % Force hold on to plot the links
+    hold on
+    
+    for n = 1:size(links,2)
+        i = links(1,n);
+        j = links(2,n);
+        
+        X = M(1,[i j])./M(4,[i j]);
+        Y = M(2,[i j])./M(4,[i j]);
+        Z = M(3,[i j])./M(4,[i j]);
+        
+        plot3(X,Y,Z,'b');
+    end
+    
+    % Restore hold state
+    if holdstate == 0
+        hold off
+    end
+    
+end
+
