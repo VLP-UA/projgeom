@@ -38,7 +38,7 @@ plot2Dpoints(m,'*r',links2a);
 %% Camera position 2
 
 % Rotate the camera by pi/3 around Z (real word coordinates)
-K2 = RotZ3(pi/3)*K
+K2 = RotZ3(pi/3)*K;
 
 figure(1)
 plot3Drefaxis(K2);
@@ -68,8 +68,10 @@ axis('equal')
 %% Object M2b
 
 figure(5)
-plot3Dpoints(M2b,'*r',links2b)
-
+plot3Dpoints(M2b,'*r',links2b);
+axis('equal')
+hold on
+plot3Drefaxis(K3);
 
 m2b = P*K3^(-1)*M2b;
 
