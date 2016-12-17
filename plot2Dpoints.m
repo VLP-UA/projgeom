@@ -14,7 +14,7 @@ if nargin < 2
   s = '*r';
  end
 
-h = plot(m(1,:)./m(3,:),m(2,:)./m(3,:),s)
+h = plot(m(1,:)./m(3,:),m(2,:)./m(3,:),s);
 
 % If links were provided, draw them:
 
