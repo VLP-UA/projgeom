@@ -25,20 +25,22 @@ M = pgNormalize(M);
 m = pgNormalize(m);
 
 % Initialize A and b
-A = [];
-b = [];
+A = zeros(8);
+b = zeros(8,1);
 
 % for all columns, i.e., for all pair of points in (M,m)
-for i = 1:size(M,2)
+for i = 1:4
     % Each pair of points in M and m provides 2 independent equantions
     tmpA = [ M(1,i) M(2,i) 1      0     0    0 -M(1,i)*m(1,i) -M(2,i)*m(1,i) ;
                 0      0   0   M(1,i) M(2,i) 1 -M(1,i)*m(2,i) -M(2,i)*m(2,i) ];
     
-    A = [A ; tmpA ];
+    A(2*i-1:2*i,:) = tmpA;
     
-    tmpb = [ m(1,i); m(2,i)];
-    b = [b ; tmpb ];
+    b(2*i-1:2*i) = [ m(1,i); m(2,i) ];
 end
+
+size(A)
+size(b)
 
 % Compute the 8 independent h terms
 % h = A^(-1)*b;
