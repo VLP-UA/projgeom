@@ -1,14 +1,18 @@
 function h=plot2Dpoints(m,s,links)
-% function plot2Dpoints(m,s)
+% PLOT2DPOINTS Plots the points in 2D defined by array m.
+%   plot2Dpoints(m,s,links)
 % 
-% Plots the 2D poinsts defined by array m. Each column of m defines a point 
-% in 2-D space, up to a constant, such that:
-% Given a column C=[U V S]' of m, the point represented by C is 
-% (x,y) = (U/S, V/S)
+%   Plots the 2D points defined by array m. Each column of m defines a
+%   point in 2-D space, up to a constant, such that, given a column C=[U V
+%   S]' of m, the point represented by C is (x,y) = (U/S, V/S)
+%   
+%   links is a 2xn array defining n pairs of points. Each column of links
+%   contains the index of 2 points in m that will be connected by a line in
+%   the final plot. 
 % 
-% 's' is a string defining the plot style (defaults to '*r' if ommited).
+%   's' is a string defining the plot style (defaults to '*r' if ommited).
 %
-% pf@ua.pt, 12 Dec 2016
+%   pf@ua.pt, 12 Dec 2016
 
 if nargin < 2
   s = '*r';

@@ -1,6 +1,5 @@
 classdef testirradincid < matlab.unittest.TestCase
-    %testirradincid Unit tests for the irradIndic.m function
-    %   Detailed explanation goes here
+%TESTIRRADINCID Unit tests for the irradIndic.m function
     
     properties
     end

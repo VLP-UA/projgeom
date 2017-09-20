@@ -1,11 +1,16 @@
 function [ irrad_angle, incid_angle, r ] = irradIncid( H_E, H_R )
-% Computes the irradiation and incidence angles for a light source and a
-% receiver, where H_E and H_R are the Homogeneous Transformation Matrices
-% describing, respectively, the emitter and receiver position and
-% orientation. 
-%   Detailed explanation goes here
+% IRRADINCID Computes the irradiation and incidence angles
+%   [ irrad_angle, incid_angle, r ] = irradIncid( H_E, H_R )
+%
+%   Computes the irradiation and incidence angles for a light source and a
+%   receiver, where H_E and H_R are the Homogeneous Transformation Matrices
+%   describing, respectively, the emitter and receiver position and
+%   orientation. Both emitter and receiver main axes are aligned with z
+%   axis.
+%
+%   r is the distance from emitter to receiver.
 
-% 1st: determine the vector from Emitter to Receiver
+% Compute the vector from Emitter to Receiver
 
 l = H_R(1:3,4) - H_E(1:3,4);
 r = norm(l);

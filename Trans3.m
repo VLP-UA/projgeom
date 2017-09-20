@@ -1,12 +1,12 @@
 function T = Trans3(x,y,z)
-% function T = Trans3(x,y,z)
+% TRANS3 Translation along the vector r = [x,y,z]
+%   T = Trans3(x,y,z)
+%   T = Trans3(r)
 %
-% Translation of [x y z]
-%
-% If x,y,z are given, these are considered as the 3 coordinates of the
-% displacement vector. 
-% If only one value is given, this is taken as the displacement vector. The
-% displacement vector must be a 3x1 column vector.
+%   If x,y,z are given, these are considered as the 3 coordinates of the
+%   displacement vector. If only one value is given, this is taken as the
+%   displacement vector. The displacement vector must be a 3x1 column
+%   vector.
 
 % Create matrix T
 T = eye(4);
@@ -33,4 +33,4 @@ else
     error('Invalid arguments.')
 end
 
-    
+% TODO: allow to express displacement vector in homogeneous coordinates.

@@ -1,6 +1,10 @@
 function [ Mn ] = pgNormalize( M )
-%function [ Mn ] = pgNormalize( M )
-%   Normalize a vector or an array in homegeneous coordinates. 
+% PGNORMALIZE Normalize a vector or an array in homogeneous coordinates
+%   Mn = pgNormalize( M )
+%
+%   The vector or array M contains one or more points, one per column. 
+%   Normalization corresponds to scale all elements of each point, such
+%   that the last coordinate is 1. 
 
 nlines = size(M,1);
 

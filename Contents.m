@@ -1,21 +1,31 @@
-% PROJGEOM: commands for handling objects using projective geometry
+% PROJGEOM commands for handling objects using projective geometry
 %
-% Miscelaneous: 
-%   objects         - Set #1
-
-% 
-%   PersProjMatrix  - function P = ProjPersMatrix1(f,u0,v0)
-%   PersProjMatrix1 - function P = ProjPersMatrix1(f,u0,v0)
-
-% Visualization
-%   plot2Dpoints    - function plot2Dpoints(m,s)
-%   plot3Dpoints    - function plot3Dpoints(M,s)
-%   plot3Drefaxis   - function h = plot3Drefaxis(K)
-
-
-% Base functions:
-%   Rotation and translation in 3D space: 
-%   RotX3           - function M = RotX3(alpha)
-%   RotY3           - function M = RotY3(alpha)
-%   RotZ3           - function M = RotZ3(gamma)
-%   Trans3          - function T = Trans3(x,y,z)
+%
+% Euclidian transformations:
+%   Trans3                - Translation along the vector r = [x,y,z]
+%   RotX3                 - Rotation of an angle alpha around X axis.
+%   RotY3                 - Rotation of an angle beta around Y axis.
+%   RotZ3                 - Rotation of an angle gamma around Z axis.
+%
+% Perspective transformations:
+%   PersProjMatrix        - Computes the Perspective Projection Matrix from camera parameters
+%   PersProjMatrix1       - Computes the Perspective Projection Matrix from camera parameters
+%
+% Visualization:
+%   plot2Dpoints          - Plots the points in 2D defined by array m.
+%   plot3Dpoints          - Plots the points in 3D defined by array m.
+%   plot3Drefaxis         - Plots the referential basis defined by homogeneous transformation matrix K.
+%
+% Auxilliary and miscelaneous: 
+%   pgNormalize           - Normalize a vector or an array in homogeneous coordinates
+%   pg2DcomputeProjTransf - Computes the Projective Transformation Matrix given 4 pairs of points
+%   irradIncid            - Computes the irradiation and incidence angles
+%
+% Demo scripts
+%   experience1           - Generates several objects and their view from cameras in different positions.
+%   experience2           - Verification of the pg2DcomputeProjTransf function
+%   objects               - Objects to be used in experience1
+%   objects2              - Set of data objects for testing the computation of the projective transformation matrix
+%
+% Testing:
+%   testirradincid        - Unit tests for the irradIndic.m function

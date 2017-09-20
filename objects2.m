@@ -1,7 +1,4 @@
-% objects2
-%
-% Set of data objects for testing the computation of the projective
-% transformation matrix
+% OBJECTS2 Set of data objects for testing the computation of the projective transformation matrix
 
 % Transformation matrix
 H = [ 1 2 3

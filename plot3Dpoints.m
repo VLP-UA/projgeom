@@ -1,12 +1,16 @@
 function plot3Dpoints(M,s,links)
-% function plot3Dpoints(M,s)
+% PLOT3DPOINTS Plots the points in 3D defined by array m.
+%   plot3Dpoints(M,s,links)
 % 
-% Plots the 3D poinsts defined by array M. Each column of M defines a point 
-% in a 3-D space, up to a constant, such that:
-% Given a column C=[U V W S]' of M, the point represented by C is 
-% (x,y,z) = (U/S, V/S, W/S)
+%   Plots the 3D poinsts defined by array M. Each column of M defines a
+%   point in a 3-D space, up to a constant, such that, given a column C=[U
+%   V W S]' of M, the point represented by C is (x,y,z) = (U/S, V/S, W/S)
+%
+%   links is a 2xn array defining n pairs of points. Each column of links
+%   contains the index of 2 points in m that will be connected by a line in
+%   the final plot.  
 % 
-% 's' is a string defining the plot style (defaults to '*r' if ommited).
+%   's' is a string defining the plot style (defaults to '*r' if ommited).
 %
 % pf@ua.pt, 12 Dec 2016
 

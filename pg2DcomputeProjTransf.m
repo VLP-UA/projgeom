@@ -1,11 +1,18 @@
 function [ H ] = pg2DcomputeProjTransf( M,m )
-% function [ H ] = pg2DcomputeProjTransf( M,m ) 
-% Computes the Projective Transformation Matrix
+% PG2DCOMPUTEPROJTRANSF Computes the Projective Transformation Matrix given 4 pairs of points
+%   [ H ] = pg2DcomputeProjTransf( M,m ) 
 %
-%   Computes the Projective Transformation Matrix H from a set of 4 pairs
-%   of points. M is the array with the 4 object points, m is the array with
-%   the 4 images, related by m = H*M.
+%   pg2DcomputeProjTransf computes the Projective Transformation Matrix H
+%   from a set of 4 pairs of points. M is the array with the 4 object
+%   points, m is the array with the 4 images. 
 %
+%   Each point corresponds to a column in M or m, in homogeneous
+%   coordinates. M and m are related by m = H*M.
+%
+%   See: Faugeras, O. (2001). Three-dimensional computer vision: a
+%   geometric viewpoint (4. print). Cambridge, Mass.: MIT Press.
+
+
 
 % The matrix H contains 8 independent terms, h11, h12, ... , h32 (h33 = 1)
 % Each pair of points provides 2 independent equations in the system

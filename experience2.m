@@ -1,6 +1,4 @@
-% experience2
-%
-% Verification of the pg2DcomputeProjTransf function
+% EXPERIENCE2 Verification of the pg2DcomputeProjTransf function
 
 
 % Initial points

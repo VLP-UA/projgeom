@@ -1,3 +1,5 @@
+% Objects to be used in experience1
+
 %% Set #1
 
 % M1: Cube centered in (0,0,0) and length 2

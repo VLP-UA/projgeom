@@ -1,7 +1,11 @@
 function plot3Drefaxis(K)
-% function plot3Drefaxis(K)
+% PLOT3DREFAXIS Plots the referential basis defined by homogeneous transformation matrix K.
 %
-% Plots the referential basis defined by transformation matrix K.
+%   Plot3dRefAxis(K) plots the 3 base vectors (x, y, z) of the
+%   transformation defined by HTM K in a 3D space. x and y axis are printed
+%   in blue; z axis is printed in red.
+%
+%   For better visualizaion, axis('equal') should be enforced. 
 
 s='b';
 

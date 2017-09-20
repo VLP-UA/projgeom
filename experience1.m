@@ -1,4 +1,4 @@
-% Experiment 1
+% Generates several objects and their view from cameras in different positions.
 
 %% Preparation
 

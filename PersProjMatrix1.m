@@ -1,9 +1,11 @@
 function P = PersProjMatrix1(f,u0,v0)
-% function P = ProjPersMatrix1(f,u0,v0)
+% PERSPROJMATRIX1 Computes the Perspective Projection Matrix from camera parameters
+%   function P = ProjPersMatrix1(f,u0,v0)
 %
-% Computes the Perspective Projection Matrix
-%    f      : focal distance
-%    u0, v0 : coordinates of focal point in retinal point
+%   Computes the Perspective Projection Matrix from the focal distance and
+%   the coordinates of the focal point in retinal plane.
+%   f      : focal distance
+%   u0, v0 : coordinates of focal point in retinal plane.
 %
 % If u0 and v0 are ommitted, they are considered to be null.
 
