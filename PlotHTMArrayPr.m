@@ -36,23 +36,26 @@ holdstate = ishold;
 hold on
 
 % Get the maximum value of Pr to normalize the plot
-M = max([HTMarray.Pr]);it
+M = max([HTMarray.Pr]);
+
+orig = [];
+disp = [];
 
 for e = HTMarray
     
     % Get the origin point of the HTM
-    orig = e.HTM(1:3,4);
+    orig = [orig e.HTM(1:3,4)];
     
     % Get displacement
     % Displacement is scaled with the received power and the max size for
     % the intensity vector
-    disp = e.HTM(1:3,3)*e.Pr/M*d;
+    disp = [disp e.HTM(1:3,3)*e.Pr/M*d];
 
-    % Plot the vector
-    quiver3(orig(1), orig(2), orig(3), disp(1), disp(2), disp(3),c);
     
     % TODO: Vectorize this!...
 end
+    % Plot the vector
+    quiver3(orig(1,:), orig(2,:), orig(3,:), disp(1,:), disp(2,:), disp(3,:),0,c);
 
 
 end
