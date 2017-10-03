@@ -15,6 +15,7 @@
 %   plot2Dpoints          - Plots the points in 2D defined by array m.
 %   plot3Dpoints          - Plots the points in 3D defined by array m.
 %   plot3Drefaxis         - Plots the referential basis defined by homogeneous transformation matrix K.
+%   PlotHTMArray          - Plots the HTMs in a struct array
 %
 % Auxilliary and miscelaneous: 
 %   pgNormalize           - Normalize a vector or an array in homogeneous coordinates
