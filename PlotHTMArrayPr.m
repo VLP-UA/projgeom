@@ -19,25 +19,26 @@ function PlotHTMArrayPr( HTMarray , varargin )
 d = 1; 
 if (nargin>=2)
     % max size of vector explicitely defined
-    d = varargin{1}
+    d = varargin{1};
 end
 
 % Default color is red.
 c = 'r';
 if (nargin>=3)
     % max size of vector explicitely defined
-    c = varargin{1}
+    c = varargin{1};
 end
 
 % Store the current hold state
 holdstate = ishold;
 
 % and force hold on
-hold on
+hold on;
 
 % Get the maximum value of Pr to normalize the plot
 M = max([HTMarray.Pr]);
 
+% Start with empty origin and displacement vectors (for quiver3)
 orig = [];
 disp = [];
 
@@ -51,11 +52,10 @@ for e = HTMarray
     % the intensity vector
     disp = [disp e.HTM(1:3,3)*e.Pr/M*d];
 
-    
-    % TODO: Vectorize this!...
 end
-    % Plot the vector
-    quiver3(orig(1,:), orig(2,:), orig(3,:), disp(1,:), disp(2,:), disp(3,:),0,c);
+
+% Plot the vectors
+quiver3(orig(1,:), orig(2,:), orig(3,:), disp(1,:), disp(2,:), disp(3,:),0,c);
 
 
 end
