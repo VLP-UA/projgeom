@@ -5,7 +5,7 @@ function plot3Drefaxis(K)
 %   transformation defined by HTM K in a 3D space. x and y axis are printed
 %   in blue; z axis is printed in red.
 %
-%   For better visualizaion, axis('equal') should be enforced. 
+%   For better visualization, axis('equal') should be enforced. 
 
 s='b';
 

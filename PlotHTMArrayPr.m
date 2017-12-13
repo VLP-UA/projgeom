@@ -1,8 +1,8 @@
-function PlotHTMArrayPr( HTMarray , varargin )
+function h = PlotHTMArrayPr( HTMarray , varargin )
 %PLOTHTMARRAYPR Plots the intensity perceived in an HTMarray
-%   PLOTHTMARRAYPR(HTMarray) 
-%   PLOTHTMARRAYPR(HTMarray, d) 
-%   PLOTHTMARRAYPR(HTMarray, d, c) 
+%   h = PLOTHTMARRAYPR(HTMarray) 
+%   h = PLOTHTMARRAYPR(HTMarray, d) 
+%   h = PLOTHTMARRAYPR(HTMarray, d, c) 
 %
 %   PLOTHTMARRAYPR plots received power Pr as a vector aligned with the z
 %   axis of the respective HTM array. The intensity vectors are scaled for
@@ -12,6 +12,7 @@ function PlotHTMArrayPr( HTMarray , varargin )
 %   HTMarray is a struct array where the struct contains a field, called
 %   HTM, a 4x4 array representing a Homogeneous Transformation Matrix.
 %   
+%   The function returns a handler to the newly created graphics
 
 %   pf@ua.pt
 
@@ -55,7 +56,7 @@ for e = HTMarray
 end
 
 % Plot the vectors
-quiver3(orig(1,:), orig(2,:), orig(3,:), disp(1,:), disp(2,:), disp(3,:),0,c);
+h = quiver3(orig(1,:), orig(2,:), orig(3,:), disp(1,:), disp(2,:), disp(3,:),0,c);
 
 
 end
