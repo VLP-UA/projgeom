@@ -12,7 +12,7 @@ function h = PlotHTMArrayPr( HTMarray , varargin )
 %   HTMarray is a struct array where the struct contains a field, called
 %   HTM, a 4x4 array representing a Homogeneous Transformation Matrix.
 %   
-%   The function returns a handler to the newly created graphics
+%   PLOTHTMARRAYPR returns a handle to the newly created quiver object.
 
 %   pf@ua.pt
 
